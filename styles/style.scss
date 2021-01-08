@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 /*--------Variable--------*/
-$primary : #9356DC;
-$secondary : #FF79DA;
-$tertary : #99E2D0;
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertary: #99e2d0;
 
 body {
     margin: 0;
-    font-family:"Roboto";
+    font-family: "Roboto";
 }
 button {
     border: none;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0;
 }
 .btn {
@@ -24,6 +26,7 @@ h1, h2, h3 {
 
 .header {
     margin-top: 10px;
+    
     .header__logo {
         text-align: center;
         padding: 10px;
@@ -48,8 +51,45 @@ h1, h2, h3 {
         .header__banner--text {
             font-size: 18px;
             margin: 15px;
-        } 
+        }
     }
 }
-
-
+.main__operation{
+    padding: 20px;
+}
+.main__operation__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .main__operation--card {
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 10px;
+        background-color: #f5f5f5;
+        flex-grow: 1;
+        .main__operation--card-badge {
+            border-radius: 25px;
+            background-color: $primary;
+            color: #fff;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            left: -13px;
+            font-size: 14px;
+        }
+        .main__operation--card-icon {
+            width: 25px;
+            text-align: center;
+            margin-left: 5px;
+        }
+        .main__operation--card-text {
+            margin: 10px;
+        }
+    }
+}
