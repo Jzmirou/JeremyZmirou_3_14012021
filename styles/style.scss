@@ -10,18 +10,27 @@ body {
 }
 button {
   border: none;
+  outline: none;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1,
 h2,
 h3 {
   margin: 0;
 }
+
 .btn {
   border-radius: 25px;
   padding: 15px 25px;
   color: #fff;
   background: linear-gradient($secondary, $primary 50%);
   font-weight: bold;
+  box-shadow: 0px 2px 6px -1px rgb(179, 179, 179);
 }
 
 .header {
@@ -30,6 +39,8 @@ h3 {
   .header__logo {
     text-align: center;
     padding: 10px;
+    box-shadow: 0px 2px 6px -1px rgb(179, 179, 179);
+    position: relative;
   }
   .header__location {
     display: flex;
@@ -100,9 +111,10 @@ h3 {
 .main__restaurant {
   background-color: #f5f5f5;
   padding: 40px;
-  max-width: 1280px;
-  margin: 0 auto;
-  border-radius: 15px;
+  .main__restaurant--wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
   @media only screen and (max-width: 767px) {
     padding: 20px;
     border-radius: 0;
@@ -174,4 +186,27 @@ h3 {
 .footer {
   background-color: #2a303d;
   color: #fff;
+  padding: 20px;
+  .footer--logo {
+    width: 100px;
+  }
+  .footer__content {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .footer--link{
+    margin: 5px 0;
+    justify-self: center;
+    @media only screen and (max-width: 767px) {
+      justify-self: start;
+    }
+    i{
+      width: 20px;
+      font-size: 14px;
+    }
+  }
 }
