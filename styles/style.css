@@ -166,21 +166,29 @@ h3 {
 }
 .main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon {
   font-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon i {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
 }
 .main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon i:nth-child(1) {
-  display: block;
+  position: absolute;
+  font-weight: 100;
 }
 .main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon i:nth-child(2) {
-  display: none;
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
+  position: absolute;
   color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 .main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon:hover i:nth-child(1) {
-  display: none;
+  color: transparent;
 }
 .main__restaurant--card .main__restaurant--card-content .main__restaurant--card-icon:hover i:nth-child(2) {
-  display: block;
+  opacity: 1;
 }
 
 .footer {
