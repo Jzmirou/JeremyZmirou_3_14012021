@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import "base.scss";
+@import "mixin.scss";
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade2 {
+    animation-delay: .25s;
+}
+.fade3 {
+    animation-delay: .5s;
+}
+.fade4 {
+    animation-delay: .75s;
+}
+.fade5 {
+    animation-delay: 1s;
+}
+ .fade6 {
+    animation-delay: 1.25s;
+}
+ .fade7 {
+    animation-delay: 1.5s;
+}
+ .fade8 {
+    animation-delay: 1.75s;
+}
+ .fade9 {
+    animation-delay: 2s;
+}
+
+.separateur {
+    width: 40px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: $tertary;
+}
+.header {
+    position: relative;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .header--back {
+        position: absolute;
+        left: 20px;
+        font-size: 22px;
+    }
+}
+.banner {
+    img {
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.main {
+    background-color: #f5f5f5;
+    border-radius: 25px 25px 0 0;
+    margin-top: -50px;
+    position: relative;
+    padding: 12px;
+    max-width: 1280px;
+    margin: -50px auto 0;
+    .main__title {
+        font-family: "Shrikhand", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0 20px 10px;
+        h1 {
+            font-weight: normal;
+        }
+    }
+    .main__title--icon {
+        @include iconLikeTaille(24px);
+        margin-right: 20px;
+    }
+}
+
+.main__section--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    @media only screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+    .main__section {
+        overflow: hidden;
+    }
+    .main__section--title {
+        margin: 10px;
+    }
+
+    .main__section__card {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        height: 75px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 8px -1px #b3b3b3;
+        overflow: hidden;
+        margin: 15px 5px;
+        cursor: pointer;
+        animation-name: fadein;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        
+
+        .main__section__card--title {
+            position: relative;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            align-self: flex-end;
+            flex: 1;
+            margin: 15px 0 15px 20px;
+            h3 {
+                margin-bottom: 5px;
+                text-overflow: inherit;
+                overflow: hidden;
+            }
+        }
+        .main__section__card--price {
+            align-self: flex-end;
+            width: 30px;
+            margin-left: 5px;
+            padding: 15px;
+            font-weight: bold;
+        }
+        .main__section__card--badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0;
+            height: 100%;
+            transition: all 0.5s;
+            background-color: $tertary;
+            font-size: 26px;
+            color: #fff;
+            i {
+                transform: rotate(90deg);
+                transition: all 0.5s;
+            }
+        }
+        &:hover {
+            .main__section__card--badge {
+                width: 75px;
+                i {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
+.main__command {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+.footer {
+    background-color: #2a303d;
+    color: #fff;
+    padding: 20px;
+    .footer--logo {
+        width: 100px;
+        font-family: "Shrikhand", sans-serif;
+    }
+    .footer__content {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media only screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .footer--link {
+        margin: 5px 0;
+        justify-self: center;
+        @media only screen and (max-width: 767px) {
+            justify-self: start;
+        }
+        i {
+            width: 20px;
+            font-size: 14px;
+        }
+    }
+}

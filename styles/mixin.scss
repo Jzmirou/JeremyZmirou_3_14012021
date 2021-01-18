@@ -1,0 +1,5 @@
+@mixin iconLikeTaille($taille) {
+    font-size: $taille;
+    height: $taille;
+    width: $taille;
+}
