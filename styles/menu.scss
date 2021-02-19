@@ -148,17 +148,19 @@
             font-size: 26px;
             color: #fff;
             i {
+                visibility: hidden;
                 transform: rotate(90deg);
                 transition: all 0.5s;
-                visibility: hidden;
+                
             }
         }
         &:hover {
             .main__section__card--badge {
                 width: 75px;
                 i {
-                    transform: rotate(0deg);
                     visibility: visible;
+                    transform: rotate(0deg);
+                    
                 }
             }
         }

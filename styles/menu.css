@@ -293,11 +293,11 @@ h3 {
 }
 
 .main__section--wrapper .main__section__card .main__section__card--badge i {
+  visibility: hidden;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  visibility: hidden;
 }
 
 .main__section--wrapper .main__section__card:hover .main__section__card--badge {
@@ -305,9 +305,9 @@ h3 {
 }
 
 .main__section--wrapper .main__section__card:hover .main__section__card--badge i {
+  visibility: visible;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  visibility: visible;
 }
 
 .main__command {
