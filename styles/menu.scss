@@ -148,7 +148,6 @@
             font-size: 26px;
             color: #fff;
             i {
-                visibility: hidden;
                 transform: rotate(90deg);
                 transition: all 0.5s;
                 
@@ -158,7 +157,6 @@
             .main__section__card--badge {
                 width: 75px;
                 i {
-                    visibility: visible;
                     transform: rotate(0deg);
                     
                 }
